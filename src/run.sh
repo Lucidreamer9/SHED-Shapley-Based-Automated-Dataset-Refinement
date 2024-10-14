@@ -1,5 +1,27 @@
 #!/bin/bash
+# Create the "workspace" directory if it does not exist
+if [ ! -d "workspace" ]; then
+  mkdir workspace
+  echo "Directory 'workspace' created."
+else
+  echo "Directory 'workspace' already exists."
+fi
 
+# Create the "output" directory if it does not exist
+if [ ! -d "output" ]; then
+  mkdir output
+  echo "Directory 'output' created."
+else
+  echo "Directory 'output' already exists."
+fi
+
+# Create the "final_dataset" directory if it does not exist
+if [ ! -d "final_dataset" ]; then
+  mkdir final_dataset
+  echo "Directory 'final_dataset' created."
+else
+  echo "Directory 'final_dataset' already exists."
+fi
 # Set working directory and paths
 Number_of_clusters=3000
 Number_of_finalset=5000
@@ -52,6 +74,7 @@ echo "Sampling the final selected dataset..."
 python sample_QOCS ${Number_of_clusters} ${Number_of_finalset}
 python sample_QWCS ${Number_of_clusters} ${Number_of_finalset}
 WORKSPACE_DIR="./workspace"
+output_dir="./output"
 rm -rf "$WORKSPACE_DIR"/*
-
+rm -rf "$output_dir"/*
 echo "Process completed."
