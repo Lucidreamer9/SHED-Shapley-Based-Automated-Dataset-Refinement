@@ -1,0 +1,5 @@
+1. Run the cluster_sen_tran.py to cluster the original dataset.
+2. Use txt_json.py to convert the proxy dataset (cluster_center) to json file.
+3. Run iteration_shapley.sh to prepare for Shapley value calculation.
+4. Run calculate_s.py to calculate Shapley value.
+5. There are 3 sampling methods to sample the final selected dataset.
