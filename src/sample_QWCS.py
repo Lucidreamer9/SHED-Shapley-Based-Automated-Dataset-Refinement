@@ -63,7 +63,8 @@ def main():
     json_temp.write(h)
 
 
-
+if __name__ == "__main__":
+    main()
 
 
 

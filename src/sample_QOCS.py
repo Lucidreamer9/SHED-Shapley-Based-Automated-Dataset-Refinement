@@ -16,7 +16,7 @@ def main():
 
     index_map = {item['input']: index for index, item in enumerate(cluster_sequence)}
 
-    # Iterate over list B to find corresponding 'input' index in list A
+    
     cluster_order = [index_map.get(item['input'], None) for item in thecenter]
     print(cluster_order)
 

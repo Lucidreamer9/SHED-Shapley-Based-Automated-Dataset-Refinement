@@ -46,28 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-# # 1. For each cluster, compute the distance of all data points to the cluster center.
-# avg_distances = []
 
-# for cluster_id, sentences in enumerate(clustered_sentences):
-#     distances = []
-#     center_embedding = clustering_model.cluster_centers_[cluster_id]
-#     for sentence in sentences:
-#         sentence_embedding = embedder.encode([sentence])
-#         distance = np.linalg.norm(sentence_embedding - center_embedding)
-#         distances.append(distance)
-    
-#     # 2. Compute the average of these distances.
-#     avg_distance = sum(distances) / len(distances) if distances else 0
-    
-#     # 3. 将结果存储为字典，key是cluster的文件名，value是平均距离。
-#     cluster_filename = "cluster"+str(cluster_id)
-#     avg_distances.append({cluster_filename: avg_distance})
-
-# # 4. 将所有这些字典添加到一个列表中。
-# # 此步骤已经在上面的循环中完成
-
-# # 5. 将该列表存储在txt文件中。
-# with open("path/to/avg_distances.txt", 'w', encoding="utf-8") as file:
-#     for item in avg_distances:
-#         file.write(json.dumps(item) + "\n")
