@@ -55,7 +55,7 @@ for i in {1..20}; do
             --save_strategy no \
             --max_new_token 4 \
             --data_path "$data_path" \
-            --dev_data_path "./workspace/dev_data.json" \
+            --dev_data_path "devdata_1444.jsonl" \  #If target on other tasks, pls use the corresponding eval set and modify the finetune_fixseed.py
             --verbose False \
             --resume_from_checkpoint None \
             --count_fine_path "$count_fine_path" \
