@@ -35,7 +35,7 @@ python txt_json.py
 
 # Step 2: Run iteration_shapley.sh to prepare for Shapley value calculation
 echo "Preparing for Shapley value calculation..."
-
+# If target on other tasks, pls use the corresponding eval set (dev_data) and modify the eval part of finetune_fixseed.py
 for i in {1..20}; do
     clusternumber=${Number_of_clusters}
     data_path="./workspace/cluster_center_${clusternumber}_${i}.json"  
@@ -55,7 +55,7 @@ for i in {1..20}; do
             --save_strategy no \
             --max_new_token 4 \
             --data_path "$data_path" \
-            --dev_data_path "devdata_1444.jsonl" \  #If target on other tasks, pls use the corresponding eval set and modify the finetune_fixseed.py
+            --dev_data_path "devdata_1444.jsonl" \  
             --verbose False \
             --resume_from_checkpoint None \
             --count_fine_path "$count_fine_path" \
