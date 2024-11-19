@@ -32,7 +32,10 @@ echo "Clustering the original dataset..."
 python cluster_sen_tran.py ${ORIGINAL_DATASET} ${Number_of_clusters}
 python txt_json.py ${Number_of_clusters}
 
-
+echo "Creating copies of the cluster center json file..."
+for i in {1..20}; do
+    cp "./workspace/cluster_center_${Number_of_clusters}.json" "./workspace/cluster_center_${Number_of_clusters}_${i}.json"
+done
 # Step 2: Run iteration_shapley.sh to prepare for Shapley value calculation
 echo "Preparing for Shapley value calculation..."
 # If target on other tasks, pls use the corresponding eval set (dev_data) and modify the eval part of finetune_fixseed.py
