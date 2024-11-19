@@ -30,7 +30,7 @@ ORIGINAL_DATASET="path/to/original_dataset.txt"
 # Step 1: Run cluster_sen_tran.py to cluster the original dataset
 echo "Clustering the original dataset..."
 python cluster_sen_tran.py ${ORIGINAL_DATASET} ${Number_of_clusters}
-python txt_json.py 
+python txt_json.py ${Number_of_clusters}
 
 
 # Step 2: Run iteration_shapley.sh to prepare for Shapley value calculation
