@@ -1,5 +1,5 @@
 import json
-
+import sys
 num_clusters = int(sys.argv[1])
 obj_temp=[]
 with open("/workspace/cluster_center_"+str(num_clusters)+".txt", "r+", encoding="utf-8") as ori:
